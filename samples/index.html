@@ -1,10 +1,68 @@
 <html ng-app="app">
 	<head>
 		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="../../libs/bootstrap-3.0.2.min.css">
+		<style>
+			.sample {
+				display: inline-block;
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			.input-container {
+				display: inline-block;
+				padding: 0;
+			}
+			.binding {
+				display: inline-block;
+				width: 100%;
+				padding: 5px 0;
+				color: #c3ccc7;
+			}
+		</style>
 		<title>AngularJS Directives</title>
 	</head>
 	<body ng-controller="MainCtrl">
-		<div>Numeric input: <input numeric-input type="text" ng-model="numericModel"> {{ numericModel }}</div>
+		
+		<div class="container">
+			
+			<div class="row">
+			
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					
+					<h2>Input directives</h2>
+					
+					<div class="sample">
+						<h5>Numeric input:</h5>
+						<pre>&lt;input numeric-input type="text" ng-model="yourModel"&gt;</pre>
+						<div class="input-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<input numeric-input type="text" ng-model="numericModel" class="form-control">
+						</div>
+						<div class="binding"> Model: {{ numericModel }}</div>
+					</div>
+					
+					<div class="sample">
+						<h5>Letter input:</h5>
+						<pre>&lt;input letter-input type="text" ng-model="yourModel"&gt;</pre>
+						<div class="input-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<input letter-input type="text" ng-model="letterModel" class="form-control">
+						</div>
+						<div class="binding">Model: {{ letterModel }}</div>
+					</div>
+					
+					<div class="sample">
+						<h5>Phone input:</h5>
+						<pre>&lt;input phone-input type="text" ng-model="yourModel"&gt;</pre>
+						<div class="input-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
+							<input phone-input type="text" ng-model="phoneModel" class="form-control">
+						</div>
+						<div class="binding">Model: {{ phoneModel }}</div>
+					</div>
+									
+				</div>
+				
+			</div>
+		</div>
 				
 		<script type="text/javascript" src="../../libs/angular.js"></script>
 		<script type="text/javascript" src="../directives.js"></script>
