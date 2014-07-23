@@ -1,0 +1,19 @@
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>AngularJS Directives</title>
+	</head>
+	<body ng-controller="MainCtrl">
+		<div>Numeric input: <input numeric-input type="text" ng-model="numericModel"> {{ numericModel }}</div>
+				
+		<script type="text/javascript" src="../../libs/angular.js"></script>
+		<script type="text/javascript" src="../directives.js"></script>
+		<script>
+			var app = angular.module("app", ["alanloffler.directives"]);
+			
+			app.controller("MainCtrl", ["$scope", function($scope) {
+				
+			}]);
+		</script>
+	</body>
+</html>
